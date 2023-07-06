@@ -4,7 +4,7 @@ description: The official website of Vans Bookkeeping LLC.
 # disabled because we are using a custom domain
 #baseurl: /business-frontpage 
 
-color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
+color-scheme: "#4F28E1"  #"mediumseagreen" # the scheme can be any HEX code like "#00aa55"
 
 sass:
   sass_dir: /assets/css/_sass
