@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<ul class="nav nav-underline justify-content-center">
+    {% for item in site.data.aboutmenu %}
+    <li class="nav-item">
+        <a class="nav-link{% if item.link == page.url %} active {% endif %}" href="{{ site.baseurl }}{{ item.link }}" >{{item.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+<div class="my-5">
+{{ content }}
+</div>
+
