@@ -10,7 +10,7 @@ Thank you for considering our services! We are thrilled to assist you and look f
 ### How to Get in Touch:
 To schedule an appointment with us, you have several convenient options:
 
-1. **Phone:** Give us a call at (916) 429-5786 during our regular business hours. Our friendly reception team will be more than happy to assist you in finding a suitable date and time for your appointment.
+1. **Phone:** Give us a call at (916) 429-5786 during our regular business hours. We will be more than happy to assist you in finding a suitable date and time for your appointment.
 
 2. **Email:** If you prefer to reach out via email, you can send your appointment request to [jashika@vansbookkeeping.com](mailto:jashika@vansbookkeeping.com). Please include your preferred date, time, and any specific details about the nature of your appointment.
 
@@ -26,7 +26,7 @@ Rest assured that your privacy is of utmost importance to us. Any information yo
 
 ### Our Commitment to You:
 
-At Vans Bookkeeping, we value your time and trust. As soon as we receive your appointment request, we will do our best to accommodate your preferences promptly. Our team of experts is ready to address your needs and ensure a productive and informative meeting.
+At Vans Bookkeeping, we value your time and trust. As soon as we receive your appointment request, we will do our best to accommodate your preferences promptly. We are ready to address your needs and ensure a productive and informative meeting.
 
 
 <!-- Location:
@@ -39,7 +39,7 @@ For those who prefer the convenience of virtual meetings, we also offer secure v
 
 ### Reach Out Today:
 
-Don't hesitate to reach out to us today! We are excited to provide you with the professional assistance you need to achieve your financial goals. Our team is looking forward to meeting with you and offering valuable insights and solutions for your unique needs.
+Don't hesitate to reach out to us today! We are excited to provide you with the professional assistance you need to achieve your financial goals. We are looking forward to meeting with you and offering valuable insights and solutions for your unique needs.
 
 Should you have any questions or require further information before scheduling your appointment, please don't hesitate to contact us. We are here to help and eager to make your experience with Vans Bookkeeping a rewarding one.
 
@@ -49,23 +49,23 @@ Thank you for considering Vans Bookkeeping as your trusted financial partner. We
 ### Business Hours:
 Our business hours are as follows:
 
-**Monday to Friday, 12:00 PM to 9:00 PM (PDT)**
+* Monday to Friday, 12:00 PM to 9:00 PM (PDT)
 
-**Saturday, 8:00 AM to 6:00 PM (PDT)**
+* Saturday, 8:00 AM to 6:00 PM (PDT)
 
-**Sunday, 8:00 AM to 6:00 PM (PDT)**
+* Sunday, 8:00 AM to 6:00 PM (PDT)
 
-### Contact Information:
+<!-- ### Contact Information:
 
 <address>
     <strong>Jashika Vans</strong>
     <br />1701 Marshall Rd <br />Vacaville, CA 95687
     <br />
-  </address>
-  <address>
+</address>
+<address>
     <abbr title="Phone">P:</abbr>
     (916) 429-5786
     <br />
     <abbr title="Email">E:</abbr>
     <a href="mailto:#">jashika@vansbookkeeping.com</a>
-  </address>
+</address> -->

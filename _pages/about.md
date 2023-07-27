@@ -31,13 +31,13 @@ Welcome to Vans Bookkeeping, where excellence in bookkeeping services meets your
 
 Our commitment to your financial success extends beyond mere record-keeping. We provide comprehensive monthly reports and a well-organized Chart of Accounts that pave the way towards financial freedom. With us, you can gain valuable insights into your business projections and closely monitor cash flow dynamics.
 
-Although we are headquartered in the scenic Vacaville North Bay Area of California, our virtual services extend nationwide, catering to small businesses across the United States. Leveraging the power of QuickBooks Online, a cutting-edge cloud-based financial management software, we streamline your financial processes, saving you precious time. From managing your finances and generating estimates to handling payroll, sales tracking, and ensuring balanced books, we've got you covered.
+Although we are physically located in the scenic Vacaville North Bay Area of California, our virtual services extend nationwide, catering to small businesses across the United States. Leveraging the power of QuickBooks Online, a cutting-edge cloud-based financial management software, we streamline your financial processes, saving you precious time. From managing your finances and generating estimates to handling payroll, sales tracking, and ensuring balanced books, we've got you covered.
 
 At Vans Bookkeeping, our hearts soar with pride as we offer precise and cost-effective services that facilitate smart decision-making. Expect to gain a clear picture of your profits, tax strategies, and cashflow within your business. Our mission is to instill confidence and clarity in your financial landscape, allowing you to focus on what truly drives your passion. With us as your dedicated partners, you'll find the freedom to pursue what you love while we take care of your financial success.
 
 
 ### Mission Statement
-At our core, our mission is to empower individuals in their entrepreneurial journey by providing unwavering support in creating and building successful businesses. We accomplish this by meticulously maintaining complete and accurate records of all financial transactions in a systematically orderly manner.
+At our core, our mission is to empower individuals and small businesses in their entrepreneurial journey by providing unwavering support in creating and building successful businesses. We accomplish this by meticulously maintaining complete and accurate records of all financial transactions in a systematically orderly manner.
 
 ### Vision Statement
 In our unwavering pursuit of excellence, we envision ourselves as the foremost and most trusted Bookkeeper, catering to the diverse needs of businesses and individuals alike. Our aim is to become the go-to partner for all bookkeeping requirements, setting new industry standards through our dedication, proficiency, and personalized approach.

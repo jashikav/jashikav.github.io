@@ -5,6 +5,3 @@ description: The official website of Vans Bookkeeping LLC.
 
 include:
   - _pages
-
-exclude:
-  - .sass-cache
