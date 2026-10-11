@@ -1,9 +1,6 @@
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">
-      Copyright &copy; 2023-2024 Vans Bookkeeping
-    </p>
+<footer class="bg-brand-950 px-4 py-8 text-brand-100">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm sm:flex-row">
+    <p>Copyright &copy; {{ 'now' | date: '%Y' }} Vans Bookkeeping</p>
+    <p class="text-brand-300">Site {{ site.data.version.version }}</p>
   </div>
-  <!-- /.container -->
 </footer>

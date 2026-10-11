@@ -1,7 +1,18 @@
 title: Vans Bookkeeping
 description: The official website of Vans Bookkeeping LLC.
-
-# color-scheme: "#4F28E1"  
+url: "https://www.vansbookkeeping.com"
+baseurl: ""
+color-scheme: "#4F28E1"
 
 include:
   - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - styles
+  - scripts
+  - README.md
+  - vendor

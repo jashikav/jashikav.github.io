@@ -1,0 +1,2 @@
+# Initial/local version. Deployment workflows set this from reserved site-v* tags.
+version: v1.0.0

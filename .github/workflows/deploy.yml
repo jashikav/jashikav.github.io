@@ -1,0 +1,65 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Merges trigger push, avoiding a second deployment on pull_request.closed.
+# Serialize version reservations, branch updates, and Pages deployments.
+concurrency:
+  group: production-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Reserve deployment version
+        id: version
+        run: node scripts/version.mjs
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: npm ci
+      - run: npm test
+      - uses: actions/configure-pages@v5
+      - run: npm run build
+        env:
+          JEKYLL_ENV: production
+      - run: npm run check
+      - name: Replace gh-pages contents
+        run: bash scripts/publish.sh
+        env:
+          SITE_VERSION: ${{ steps.version.outputs.version }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

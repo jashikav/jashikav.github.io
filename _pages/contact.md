@@ -1,4 +1,5 @@
 ---
+title: Contact
 layout: default
 permalink: /contact/
 ---
@@ -16,7 +17,7 @@ To schedule an appointment with us, you have several convenient options:
 
 3. **Online Form:** Fill out the 30 minute appointment request form below with your contact information and preferred appointment details. We will promptly get back to you to confirm the meeting.
 <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/vansbookkeeping/30min" style="min-width:320px;height:700px;"></div>
+<div class="calendly-inline-widget" data-url="https://calendly.com/vansbookkeeping/30min" style="min-width:100%;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
 

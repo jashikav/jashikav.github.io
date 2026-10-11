@@ -3,3 +3,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 optional.md
+node_modules/
+.bundle/
+vendor/
+assets/css/main.css
+.DS_Store
