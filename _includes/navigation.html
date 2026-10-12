@@ -1,13 +1,14 @@
-<header class="border-b border-brand-100 bg-white">
-  <nav aria-label="Main navigation" class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-    <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 font-semibold text-brand-950">
-      <img src="{{ '/assets/images/logo3.jpg' | relative_url }}" alt="Vans Bookkeeping home" width="64" height="64" class="rounded-xl">
-      <span class="text-lg">Vans Bookkeeping</span>
+<header class="site-header">
+  <nav aria-label="Main navigation" class="container navigation">
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="VANS Bookkeeping home">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" width="48" height="48">
+      <span>VANS Bookkeeping<small>LOCAL ROOTS. CLEARER NUMBERS.</small></span>
     </a>
-    <ul class="flex w-full flex-wrap gap-1 sm:w-auto" role="list">
+    <ul class="nav-menu" role="list">
       {% for item in site.data.menu %}
-      <li><a class="nav-link block" {% if item.link == page.url %}aria-current="page"{% endif %} href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
+      <li><a class="nav-link" {% if item.link == page.url %}aria-current="page"{% endif %} href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
+    <a href="{{ '/contact/' | relative_url }}" class="button button-small nav-cta">Let’s talk {% include icon.html name="arrow" %}</a>
   </nav>
 </header>

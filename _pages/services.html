@@ -1,0 +1,21 @@
+---
+title: Bookkeeping Services
+description: Explore monthly bookkeeping, financial reporting, payroll, receivables, payables, and more for Northern California small businesses.
+layout: default
+permalink: /services/
+---
+<section class="page-hero" aria-labelledby="services-title">
+  <p class="eyebrow">BOOKKEEPING BUILT AROUND YOU</p>
+  <h1 id="services-title">Less on your plate.<br><span>More clarity in your books.</span></h1>
+  <p>Every business runs a little differently. Choose the bookkeeping support you need, from everyday transactions to reports that help you see the bigger picture.</p>
+  <a class="button" href="{{ '/contact/' | relative_url }}">Find the right support {% include icon.html name="arrow" %}</a>
+</section>
+<section class="section services-section" aria-labelledby="service-list-title">
+  <div class="section-heading"><div><p class="eyebrow">HOW WE CAN HELP</p><h2 id="service-list-title">Your numbers, thoughtfully managed.</h2></div></div>
+  <div class="card-grid services-grid">
+    {% for service in site.data.services %}{% include service-card.html service=service detail=true %}{% endfor %}
+  </div>
+</section>
+<aside class="scope-note"><div class="icon-tile">{% include icon.html name="people" %}</div><div><h2>A scope that makes sense for your business.</h2><p>We’ll discuss your accounts, transaction volume, software, and reporting needs before agreeing on services and pricing. Our work in QuickBooks Online helps keep your records organized and ready to share with your CPA.</p></div></aside>
+<section class="section" aria-labelledby="process-title"><div class="section-heading"><div><p class="eyebrow">GETTING STARTED</p><h2 id="process-title">One conversation. A clearer plan.</h2></div></div>{% include process.html %}</section>
+{% include cta.html %}

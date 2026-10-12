@@ -1,4 +1,4 @@
-# Vans Bookkeeping
+# VANS Bookkeeping
 
 Jekyll builds the HTML; Tailwind CSS compiles a local stylesheet with a theme based on `#4F28E1`. The custom domain remains `www.vansbookkeeping.com`.
 
@@ -24,6 +24,20 @@ npm run check
 ```
 
 Generated CSS and `_site` are ignored. Commit both dependency lockfiles when changing dependencies. Jekyll remains the site generator; GitHub does not need to build the output again.
+
+## Content and design
+
+The site targets Northern California small businesses while retaining the purple brand theme. All four pages use `_layouts/default.html`; reusable cards, icons, calls to action, and the getting-started process live in `_includes`. Page sources live in `index.html` and `_pages/*.html`.
+
+- Update services in `_data/services.yml`. The `home` flag selects the three homepage services; each `id` is also a linkable anchor on the services page.
+- Update the process and homepage FAQs in `_data/process.yml` and `_data/faq.yml`.
+- Update phone, email, location, and the Calendly link once in `_config.yml` under `contact`.
+- Edit theme tokens, shared components, and responsive layouts in `styles/app.css`; rebuild rather than editing generated CSS.
+- Each page provides its own search description. Shared metadata adds canonical and social sharing tags.
+
+The consultation photo has 640px and 1200px WebP versions with responsive image sizing. The logo in `assets/images/logo.svg` combines a white V with an open lavender book on the brand-purple background; the navigation and favicon share this scalable asset. Original JPEGs remain in the repository but are excluded from the published build. Calendly opens through a direct booking link, so the contact page does not load a third-party scheduling script. FAQs use native HTML `details` elements and need no JavaScript.
+
+`npm run check` validates generated pages, local links (including service anchors and responsive image candidates), page headings, descriptions, theme output, and deployment metadata.
 
 ## GitHub Pages setup and deployment
 

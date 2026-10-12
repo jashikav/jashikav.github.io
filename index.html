@@ -1,54 +1,92 @@
 ---
 layout: default
+title: Bookkeeping for Northern California Small Businesses
+description: Spend more time running your business. VANS Bookkeeping offers personalized bookkeeping, financial reporting, and QuickBooks Online support from Vacaville, California.
 ---
-<section class="mb-12 rounded-3xl border border-brand-100 bg-white px-6 py-16 text-center sm:py-20">
-  <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-brand-600">Clarity. Confidence. Balance.</p>
-  <h1 class="text-4xl font-bold tracking-tight text-brand-950 sm:text-6xl">Vans Bookkeeping</h1>
-  <p class="mx-auto mt-6 max-w-2xl text-xl leading-8 text-slate-600">Balancing Your Books, Empowering Your Success.</p>
-  <a href="{{ '/contact/' | relative_url }}" class="button mt-8">Let’s talk about your business</a>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="location-label">{% include icon.html name="pin" %} ROOTED IN NORTHERN CALIFORNIA</p>
+    <h1 id="hero-title">Your business.<br>Your ambition.<br><span>Our bookkeeping.</span></h1>
+    <p class="hero-description">You didn’t start a business to spend your evenings balancing the books. We bring clarity to your numbers, so you can get back to what you do best.</p>
+    <div class="button-group">
+      <a href="{{ '/contact/' | relative_url }}" class="button">Let’s talk about your business {% include icon.html name="arrow" %}</a>
+      <a href="#services" class="text-link">Explore our services {% include icon.html name="arrow" %}</a>
+    </div>
+    <p class="hero-note">Personalized support for Northern California small businesses.</p>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-image-wrap">
+      <img class="hero-image" src="{{ '/assets/images/consultation-1200.webp' | relative_url }}" srcset="{{ '/assets/images/consultation-640.webp' | relative_url }} 640w, {{ '/assets/images/consultation-1200.webp' | relative_url }} 1200w" sizes="(min-width: 900px) 520px, (min-width: 600px) 80vw, 95vw" alt="Business owners reviewing financial documents with a professional" width="1200" height="800" fetchpriority="high">
+      <div class="image-label">{% include icon.html name="pin" %} Vacaville roots. Northern California reach.</div>
+    </div>
+    <div class="clarity-card">
+      <span class="clarity-icon">{% include icon.html name="check" %}</span>
+      <div><strong>A little more peace of mind.</strong><p>Organized books. A clearer way forward.</p></div>
+    </div>
+    <span class="visual-caption">GOOD BOOKS. BETTER BUSINESS DAYS.</span>
+  </div>
 </section>
 
-<section aria-label="Why choose Vans Bookkeeping" class="grid gap-6 md:grid-cols-3">
-  <div class="h-full">
-    <div class="flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
-      <img class="aspect-[4/3] w-full object-cover" loading="lazy" src="{{ '/assets/images/details.jpeg' | relative_url }}" alt="" />
-      <div class="flex-1 p-6">
-        <h2 class="mb-3 text-xl font-semibold text-brand-950">Attention to Detail</h2>
-        <p class="leading-7">
-          We pride ourselves on our meticulous attention to detail, ensuring accuracy and precision in every financial record we manage.
-        </p>
-      </div>
-      <div class="px-6 pb-6">
-        <a href="{{ '/services/' | relative_url }}" class="button">Find Out More</a>
-      </div>
-    </div>
+<div class="trust-strip" aria-label="Our approach">
+  <span>{% include icon.html name="book" %} QuickBooks Online</span>
+  <span>{% include icon.html name="people" %} Personalized service</span>
+  <span>{% include icon.html name="document" %} Reports for you & your CPA</span>
+  <span>{% include icon.html name="pin" %} Local & virtual support</span>
+</div>
+
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="section-heading">
+    <div><p class="eyebrow">A STRONGER FOUNDATION</p><h2 id="services-title">Big care for your small business.</h2></div>
+    <a class="text-link" href="{{ '/services/' | relative_url }}">View all services {% include icon.html name="arrow" %}</a>
   </div>
-  <div class="h-full">
-    <div class="flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
-      <img class="aspect-[4/3] w-full object-cover" loading="lazy" src="{{ '/assets/images/customer.jpeg' | relative_url }}" alt="" />
-      <div class="flex-1 p-6">
-        <h2 class="mb-3 text-xl font-semibold text-brand-950">Excellent Customer Service</h2>
-        <p class="leading-7">
-          We go above and beyond to deliver excellent customer service, providing prompt and personalized assistance, ensuring your financial needs are met with utmost care and satisfaction.
-        </p>
-      </div>
-      <div class="px-6 pb-6">
-        <a href="{{ '/services/' | relative_url }}" class="button">Find Out More</a>
-      </div>
-    </div>
-  </div>
-  <div class="h-full">
-    <div class="flex h-full flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
-      <img class="aspect-[4/3] w-full object-cover" loading="lazy" src="{{ '/assets/images/cost.jpeg' | relative_url }}" alt="" />
-      <div class="flex-1 p-6">
-        <h2 class="mb-3 text-xl font-semibold text-brand-950">Competitive Pricing</h2>
-        <p class="leading-7">
-          We offer competitive pricing without compromising on the quality of our services, providing cost-effective solutions that cater to the diverse financial needs of small businesses. 
-        </p>
-      </div>
-      <div class="px-6 pb-6">
-        <a href="{{ '/contact/' | relative_url }}" class="button">Contact Us Today!</a>
-      </div>
-    </div>
+  <p class="section-intro">From the everyday details to the bigger picture, we help you make sense of your finances.</p>
+  <div class="card-grid">
+    {% assign home_services = site.data.services | where: 'home', true %}
+    {% for service in home_services %}{% include service-card.html service=service %}{% endfor %}
   </div>
 </section>
+
+<section class="approach-panel section" aria-labelledby="approach-title">
+  <div class="approach-copy">
+    <p class="eyebrow">MORE THAN NUMBERS</p>
+    <h2 id="approach-title">A bookkeeping partner.<br>A little breathing room.</h2>
+    <p>Your business deserves attention, and so do you. We take the time to understand how you work and help bridge the gap between your day-to-day finances and your CPA.</p>
+    <a href="{{ '/about/' | relative_url }}" class="text-link">Get to know VANS Bookkeeping {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="benefit-stack">
+    <div class="benefit"><span class="benefit-number">01</span><div><h3>Care in the details</h3><p>Thoughtfully organized records and reconciled accounts, so your numbers tell a clearer story.</p></div></div>
+    <div class="benefit"><span class="benefit-number">02</span><div><h3>A real conversation</h3><p>Personalized help and plain-language answers, with your business needs at the center.</p></div></div>
+    <div class="benefit"><span class="benefit-number">03</span><div><h3>Support that fits</h3><p>A service scope built around your business, with pricing discussed before we get started.</p></div></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="process-title">
+  <div class="section-heading"><div><p class="eyebrow">LET’S MAKE THIS SIMPLE</p><h2 id="process-title">From overwhelmed to organized.</h2></div><p class="heading-note">A clear next step, wherever you’re starting.</p></div>
+  {% include process.html %}
+</section>
+
+<section class="local-panel section" aria-labelledby="local-title">
+  <div class="local-copy">
+    <p class="eyebrow">NEARBY, EVEN WHEN WE MEET ONLINE</p>
+    <h2 id="local-title">Northern California is home.<br>Your business is our focus.</h2>
+    <p>Based in Vacaville, we work with small business owners across Solano County, the Sacramento region, and the Bay Area. With virtual bookkeeping through QuickBooks Online, support is always within reach.</p>
+    <a class="text-link" href="{{ '/contact/' | relative_url }}">Connect with a local bookkeeper {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="region-card">
+    <div class="icon-tile">{% include icon.html name="pin" %}</div>
+    <h3>Local understanding.<br>Flexible connections.</h3>
+    <ul class="region-tags" role="list"><li>Vacaville</li><li>Fairfield</li><li>Solano County</li><li>Sacramento region</li><li>North Bay</li><li>Bay Area</li></ul>
+    <p>Virtual services also available nationwide.</p>
+  </div>
+</section>
+
+<section class="section faq-section" aria-labelledby="faq-title">
+  <div><p class="eyebrow">A FEW THINGS YOU MAY BE WONDERING</p><h2 id="faq-title">Good questions.<br>Clear answers.</h2><p>Have something else in mind?</p><a href="{{ '/contact/' | relative_url }}" class="text-link">Just ask us {% include icon.html name="arrow" %}</a></div>
+  <div class="faq-list">
+    {% for faq in site.data.faq %}
+    <details class="faq-item"><summary>{{ faq.question }}<span class="faq-toggle" aria-hidden="true"></span></summary><p>{{ faq.answer }}</p></details>
+    {% endfor %}
+  </div>
+</section>
+
+{% include cta.html %}

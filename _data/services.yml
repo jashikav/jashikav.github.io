@@ -1,0 +1,67 @@
+- id: monthly-bookkeeping
+  title: Monthly bookkeeping
+  icon: book
+  home: true
+  description: Keep everyday transactions organized and your bank and credit card accounts balanced. Know where your money is going.
+  features:
+    - Transaction categorization
+    - Bank and credit card reconciliations
+    - Organized chart of accounts
+- id: financial-reporting
+  title: Financial reporting
+  icon: chart
+  home: true
+  description: Turn your books into a clearer picture of your business, with useful financial reports and a closer look at cash flow.
+  features:
+    - Monthly financial reports
+    - Management reports
+    - Cash flow visibility
+- id: receivables-payables
+  title: Receivables & payables
+  icon: exchange
+  home: true
+  description: Stay on top of customer invoices and vendor bills, so you can see what’s coming in and what’s going out.
+  features:
+    - Customer invoice tracking
+    - Outstanding payment tracking
+    - Organized vendor bills
+- id: payroll-1099
+  title: Payroll & 1099 support
+  icon: people
+  description: Bring structure to employee payroll and contractor reporting, with processing and filing support tailored to your business.
+  features:
+    - Payroll processing
+    - Payroll filing support
+    - 1099 filing
+- id: job-costing
+  title: Job costing & estimates
+  icon: briefcase
+  description: Understand the numbers behind each project. Track job costs and estimates to get a clearer view of profitability.
+  features:
+    - Project cost tracking
+    - Estimate tracking
+    - Job profitability reporting
+- id: inventory
+  title: Inventory tracking
+  icon: box
+  description: Keep inventory records organized so your books reflect the products your business buys, holds, and sells.
+  features:
+    - Inventory records
+    - Purchase and sales tracking
+    - Inventory reporting
+- id: sales-tax
+  title: Sales tax accounting
+  icon: document
+  description: Get help organizing sales tax records and filing, as part of a bookkeeping service scoped to your business needs.
+  features:
+    - Sales tax recordkeeping
+    - Sales tax accounting
+    - Filing support
+- id: fixed-assets
+  title: Fixed asset management
+  icon: building
+  description: Maintain clear records of the equipment and other fixed assets your business relies on, ready to share with your CPA.
+  features:
+    - Fixed asset records
+    - Purchase tracking
+    - Organized reporting for your CPA

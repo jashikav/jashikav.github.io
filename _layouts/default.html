@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body class="flex min-h-screen flex-col">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-4">Skip to content</a>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   {% include navigation.html %}
-  <main id="main-content" class="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 sm:py-16" tabindex="-1">
-    {% if page.url == '/' %}
-      {{ content }}
-    {% else %}
-      <article class="page-copy">{{ content }}</article>
-    {% endif %}
+  <main id="main-content" class="site-main container" tabindex="-1">
+    {{ content }}
   </main>
   {% include footer.html %}
 </body>

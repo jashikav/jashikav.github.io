@@ -1,0 +1,11 @@
+<article class="card service-card" id="{{ include.service.id }}">
+  <div class="icon-tile">{% include icon.html name=include.service.icon %}</div>
+  <h3>{{ include.service.title }}</h3>
+  <p>{{ include.service.description }}</p>
+  {% if include.detail %}
+  <ul class="check-list">
+    {% for feature in include.service.features %}<li>{% include icon.html name="check" %}{{ feature }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+  <a class="text-link" href="{% if include.detail %}{{ '/contact/' | relative_url }}{% else %}{{ '/services/' | relative_url }}#{{ include.service.id }}{% endif %}">{% if include.detail %}Discuss your needs{% else %}Explore service{% endif %} {% include icon.html name="arrow" %}</a>
+</article>
