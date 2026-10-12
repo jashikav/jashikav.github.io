@@ -1,9 +1,23 @@
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">
-      Copyright &copy; 2023-2024 Vans Bookkeeping
-    </p>
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div>
+      <a class="footer-brand" href="{{ '/' | relative_url }}">VANS Bookkeeping<span class="brand-dot">.</span></a>
+      <p>Local roots. Clearer numbers. More room to grow.</p>
+      <p>Based in Vacaville. Serving Northern California and beyond.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <p class="footer-label">Explore</p>
+      {% for item in site.data.menu %}<a href="{{ item.link | relative_url }}">{{ item.title }}</a>{% endfor %}
+    </nav>
+    <div class="footer-contact">
+      <p class="footer-label">Let’s connect</p>
+      <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      <a href="tel:{{ site.contact.phone_link }}">{{ site.contact.phone }}</a>
+      <span>{{ site.contact.location }}</span>
+    </div>
   </div>
-  <!-- /.container -->
+  <div class="container footer-bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} VANS Bookkeeping LLC. All rights reserved.</p>
+    <p>Site {{ site.data.version.version }}</p>
+  </div>
 </footer>

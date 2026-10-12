@@ -1,0 +1,22 @@
+{
+  "name": "vans-bookkeeping-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "css:build": "tailwindcss -i styles/app.css -o assets/css/main.css --minify",
+    "css:watch": "tailwindcss -i styles/app.css -o assets/css/main.css --watch",
+    "build": "npm run css:build && bundle exec jekyll build --strict_front_matter",
+    "dev": "npm run css:build && concurrently --kill-others --names css,jekyll \"npm run css:watch\" \"bundle exec jekyll serve --livereload\"",
+    "check": "node scripts/check-site.mjs",
+    "test": "node --test scripts/version.test.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.0",
+    "concurrently": "10.0.6",
+    "tailwindcss": "4.3.0"
+  }
+}

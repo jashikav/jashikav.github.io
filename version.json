@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"version": {{ site.data.version.version | jsonify }}}

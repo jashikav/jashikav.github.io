@@ -1,7 +1,28 @@
-title: Vans Bookkeeping
-description: The official website of Vans Bookkeeping LLC.
-
-# color-scheme: "#4F28E1"  
+title: VANS Bookkeeping
+description: Personalized bookkeeping for Northern California small businesses. Based in Vacaville, VANS Bookkeeping helps you organize your books, understand your cash flow, and work confidently with your CPA.
+url: "https://www.vansbookkeeping.com"
+baseurl: ""
+color-scheme: "#4F28E1"
+contact:
+  phone: "(916) 429-5786"
+  phone_link: "+19164295786"
+  email: "jashika@vansbookkeeping.com"
+  booking_url: "https://calendly.com/vansbookkeeping/30min"
+  location: "Vacaville, California"
 
 include:
   - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - styles
+  - scripts
+  - README.md
+  - vendor
+  - assets/images/details.jpeg
+  - assets/images/customer.jpeg
+  - assets/images/cost.jpeg
+  - assets/images/logo3.jpg

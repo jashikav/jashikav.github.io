@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">VANS Bookkeeping</title>
+  <desc id="logo-description">A white V over an open lavender book on a purple rounded square.</desc>
+  <rect width="64" height="64" rx="16" fill="#4F28E1"/>
+  <path d="M13 18c7 0 13 3 19 8v22c-6-5-12-8-19-8V18Z" fill="#b6a3f5"/>
+  <path d="M51 18c-7 0-13 3-19 8v22c6-5 12-8 19-8V18Z" fill="#e9e2ff"/>
+  <path d="M13 44c7 0 13 3 19 8 6-5 12-8 19-8" fill="none" stroke="#b6a3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m20 19 12 24 12-24" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

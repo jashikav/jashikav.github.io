@@ -1,0 +1,9 @@
+<ol class="card-grid process-grid" role="list">
+  {% for step in site.data.process %}
+  <li class="card process-card">
+    <span class="step-number">0{{ forloop.index }}</span>
+    <h3>{{ step.title }}</h3>
+    <p>{{ step.description }}</p>
+  </li>
+  {% endfor %}
+</ol>
