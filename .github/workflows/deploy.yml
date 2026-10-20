@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 # Merges trigger push, avoiding a second deployment on pull_request.closed.
-# Serialize version reservations, branch updates, and Pages deployments.
+# Serialize version reservations and Pages deployments.
 concurrency:
   group: production-pages
   cancel-in-progress: false
@@ -42,10 +42,6 @@ jobs:
         env:
           JEKYLL_ENV: production
       - run: npm run check
-      - name: Replace gh-pages contents
-        run: bash scripts/publish.sh
-        env:
-          SITE_VERSION: ${{ steps.version.outputs.version }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
