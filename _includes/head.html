@@ -1,18 +1,20 @@
 <head>
+  {% assign page_title = page.title | replace: "[company_name]", site.title %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% assign description = page.description | default: site.description %}
+  {% assign description = page.description | default: site.description | replace: "[company_name]", site.title %}
   <meta name="description" content="{{ description | escape }}">
   <meta name="theme-color" content="{{ site.color-scheme }}">
   <meta name="site-version" content="{{ site.data.version.version }}">
-  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  <title>{% if page.title %}{{ page_title | escape }} | {% endif %}{{ site.title | escape }}</title>
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.title | escape }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}">
+  <meta property="og:title" content="{% if page.title %}{{ page_title | escape }} | {% endif %}{{ site.title | escape }}">
   <meta property="og:description" content="{{ description | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/images/consultation-1200.webp' | absolute_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/logo.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.data.version.version }}">
+  <script src="{{ '/assets/js/navigation.js' | relative_url }}?v={{ site.data.version.version }}" defer></script>
 </head>

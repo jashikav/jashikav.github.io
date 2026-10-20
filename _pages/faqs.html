@@ -1,0 +1,28 @@
+---
+title: Frequently Asked Questions
+description: Answers to common questions about [company_name], QuickBooks Online, working with your CPA, pricing, and getting started.
+layout: default
+permalink: /faqs/
+---
+<section class="page-hero" aria-labelledby="faqs-title">
+  <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+  <h1 id="faqs-title">Good questions.<br><span>Clear answers.</span></h1>
+  <p>Learn more about our bookkeeping services, where we work, and what to expect when we get started.</p>
+</section>
+<section class="section faq-section" aria-labelledby="faq-help-title">
+  <div>
+    <p class="eyebrow">HERE TO HELP</p>
+    <h2 id="faq-help-title">Getting to know {{ site.title | escape }}.</h2>
+    <p>Have a question about your business that isn’t covered here?</p>
+    <a href="{{ '/contact/' | relative_url }}" class="text-link">Ask us a question {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="faq-list">
+    {% for faq in site.data.faq %}
+    <details class="faq-item">
+      <summary>{{ faq.question }}<span class="faq-toggle" aria-hidden="true"></span></summary>
+      <p>{{ faq.answer }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+{% include cta.html %}

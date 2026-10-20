@@ -6,7 +6,7 @@ const root = '_site';
 const version = JSON.parse(readFileSync(`${root}/version.json`, 'utf8')).version;
 assert.match(version, /^v\d+\.\d+\.\d+$/);
 assert.equal(readFileSync(`${root}/CNAME`, 'utf8').trim(), 'www.vansbookkeeping.com');
-for (const file of ['index.html', 'about/index.html', 'services/index.html', 'contact/index.html']) {
+for (const file of ['index.html', 'about/index.html', 'faqs/index.html', 'services/index.html', 'contact/index.html']) {
   assert.ok(existsSync(path.join(root, file)), `Missing ${file}`);
 }
 function check(dir) {

@@ -1,6 +1,6 @@
 ---
 title: Contact & Book an Appointment
-description: Talk with VANS Bookkeeping about your small business. Book a 30-minute appointment, call (916) 429-5786, or email us in Vacaville, California.
+description: Talk with [company_name] about your small business. Book a 30-minute appointment, call us, or email us in Vacaville, California.
 layout: default
 permalink: /contact/
 ---
@@ -9,7 +9,7 @@ permalink: /contact/
   <article class="card booking-card"><div class="icon-tile">{% include icon.html name="clock" %}</div><p class="eyebrow">A CONVERSATION IS A GOOD START</p><h2>Let’s talk about your business.</h2><p>Book a 30-minute appointment to walk through your current books, your goals, and where you need a hand.</p><ul class="check-list"><li>{% include icon.html name="check" %}Tell us a little about your business</li><li>{% include icon.html name="check" %}Discuss your bookkeeping needs</li><li>{% include icon.html name="check" %}Explore services and next steps</li></ul><a class="button" href="{{ site.contact.booking_url }}" target="_blank" rel="noopener noreferrer">Choose a time on Calendly {% include icon.html name="arrow" %}<span class="sr-only"> (opens in a new tab)</span></a><p class="booking-note">Prefer a virtual meeting? Let us know when you book.</p></article>
   <div class="contact-stack">
     <article class="card contact-card"><div class="icon-tile">{% include icon.html name="mail" %}</div><div><h2>Send an email</h2><p>A question or a little background is all it takes.</p><a class="text-link" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div></article>
-    <article class="card contact-card"><div class="icon-tile">{% include icon.html name="phone" %}</div><div><h2>Give us a call</h2><p>Let’s find a convenient time to connect.</p><a class="text-link" href="tel:{{ site.contact.phone_link }}">{{ site.contact.phone }}</a></div></article>
+    <article class="card contact-card"><div class="icon-tile">{% include icon.html name="phone" %}</div><div><h2>Give us a call</h2><p>Let’s find a convenient time to connect.</p><a class="button button-small" href="tel:{{ site.contact.phone_link }}">Call us {% include icon.html name="phone" %}</a></div></article>
     <article class="card contact-card"><div class="icon-tile">{% include icon.html name="pin" %}</div><div><h2>Local & connected</h2><p>Based in {{ site.contact.location }}. Serving Northern California and virtual clients nationwide.</p></div></article>
   </div>
 </section>

@@ -1,23 +1,29 @@
 <footer class="site-footer">
   <div class="container footer-main">
     <div>
-      <a class="footer-brand" href="{{ '/' | relative_url }}">VANS Bookkeeping<span class="brand-dot">.</span></a>
+      <a class="footer-brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
       <p>Local roots. Clearer numbers. More room to grow.</p>
       <p>Based in Vacaville. Serving Northern California and beyond.</p>
     </div>
     <nav aria-label="Footer navigation">
       <p class="footer-label">Explore</p>
-      {% for item in site.data.menu %}<a href="{{ item.link | relative_url }}">{{ item.title }}</a>{% endfor %}
+      {% for item in site.data.menu %}
+        {% if item.children %}
+          {% for child in item.children %}<a href="{{ child.link | relative_url }}">{{ child.title }}</a>{% endfor %}
+        {% else %}
+          <a href="{{ item.link | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      {% endfor %}
     </nav>
     <div class="footer-contact">
       <p class="footer-label">Let’s connect</p>
       <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
-      <a href="tel:{{ site.contact.phone_link }}">{{ site.contact.phone }}</a>
+      <a class="button button-small button-white" href="tel:{{ site.contact.phone_link }}">Call us {% include icon.html name="phone" %}</a>
       <span>{{ site.contact.location }}</span>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; {{ 'now' | date: '%Y' }} VANS Bookkeeping LLC. All rights reserved.</p>
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title | escape }}. All rights reserved.</p>
     <p>Site {{ site.data.version.version }}</p>
   </div>
 </footer>

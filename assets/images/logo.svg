@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title logo-description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1036" height="632" viewBox="110 318 1036 632" role="img" aria-labelledby="logo-title logo-description">
   <title id="logo-title">VANS Bookkeeping</title>
-  <desc id="logo-description">A white V over an open lavender book on a purple rounded square.</desc>
-  <rect width="64" height="64" rx="16" fill="#4F28E1"/>
-  <path d="M13 18c7 0 13 3 19 8v22c-6-5-12-8-19-8V18Z" fill="#b6a3f5"/>
-  <path d="M51 18c-7 0-13 3-19 8v22c6-5 12-8 19-8V18Z" fill="#e9e2ff"/>
-  <path d="M13 44c7 0 13 3 19 8 6-5 12-8 19-8" fill="none" stroke="#b6a3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="m20 19 12 24 12-24" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <desc id="logo-description">A blue VB monogram with an upward sweeping arrow and three rising chart bars.</desc>
+  <g fill="#0065e8">
+    <path d="M122 330 268 329 484 709 631 412C651 374 649 353 616 330L836 329C957 329 1025 367 1025 443 1025 488 993 514 913 539 927 514 933 486 933 459 933 382 901 353 810 353H750L597 648C511 699 443 758 396 825L168 388C152 359 138 343 122 330Z"/>
+    <path d="M410 845C502 713 648 633 811 585 929 550 1021 528 1077 475L1051 460 1135 433 1111 518 1093 491C1030 552 943 576 831 612 665 665 545 764 459 938Z"/>
+    <path d="M511 932C532 871 562 815 600 770V907H802C931 907 1001 852 1001 761 1001 684 953 635 852 621L933 594C1064 610 1120 668 1120 761 1120 866 1025 933 850 933Z"/>
+    <path d="M687 784H744V889H687Z"/>
+    <path d="M769 734H827V889H769Z"/>
+    <path d="M853 678H912V867C893 876 874 882 853 887Z"/>
+  </g>
 </svg>

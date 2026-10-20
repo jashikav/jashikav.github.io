@@ -1,11 +1,17 @@
-- title: Home
-  link: /
-
 - title: Services
   link: /services/
 
+- title: Industries
+  children:
+    - title: Property Management & Construction
+      link: /niches/property-management-construction/
+
 - title: About
-  link: /about/
+  children:
+    - title: About Us
+      link: /about/
+    - title: FAQs
+      link: /faqs/
 
 - title: Contact
   link: /contact/
