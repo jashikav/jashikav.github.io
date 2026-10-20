@@ -1,8 +1,9 @@
+# Company name: used throughout the site. Restart Jekyll after changing it.
 title: VANS Bookkeeping
-description: Personalized bookkeeping for Northern California small businesses. Based in Vacaville, VANS Bookkeeping helps you organize your books, understand your cash flow, and work confidently with your CPA.
+description: Personalized bookkeeping for Northern California small businesses. Based in Vacaville, [company_name] helps you organize your books, understand your cash flow, and work confidently with your CPA.
 url: "https://www.vansbookkeeping.com"
 baseurl: ""
-color-scheme: "#4F28E1"
+color-scheme: "#0e74e9"
 contact:
   phone: "(916) 429-5786"
   phone_link: "+19164295786"

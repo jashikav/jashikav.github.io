@@ -1,14 +1,37 @@
 <header class="site-header">
   <nav aria-label="Main navigation" class="container navigation">
-    <a href="{{ '/' | relative_url }}" class="brand" aria-label="VANS Bookkeeping home">
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="{{ site.title | escape }} home">
       <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" width="48" height="48">
-      <span>VANS Bookkeeping<small>LOCAL ROOTS. CLEARER NUMBERS.</small></span>
+      <span>{{ site.title | escape }}<small>LOCAL ROOTS. CLEARER NUMBERS.</small></span>
     </a>
-    <ul class="nav-menu" role="list">
-      {% for item in site.data.menu %}
-      <li><a class="nav-link" {% if item.link == page.url %}aria-current="page"{% endif %} href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-    <a href="{{ '/contact/' | relative_url }}" class="button button-small nav-cta">Let’s talk {% include icon.html name="arrow" %}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navigation-links" hidden>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <span>Menu</span>
+    </button>
+    <div class="nav-links" id="navigation-links">
+      <ul class="nav-menu" role="list">
+        {% for item in site.data.menu %}
+        {% if item.children %}
+        {% assign section_active = false %}
+        {% for child in item.children %}{% if child.link == page.url %}{% assign section_active = true %}{% endif %}{% endfor %}
+        <li>
+          <details class="nav-dropdown">
+            <summary class="nav-link{% if section_active %} nav-section-active{% endif %}">{{ item.title }}<span class="nav-chevron" aria-hidden="true"></span></summary>
+            <ul class="nav-submenu" role="list">
+              {% for child in item.children %}
+              <li><a class="nav-link" {% if child.link == page.url %}aria-current="page"{% endif %} href="{{ child.link | relative_url }}">{{ child.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        {% else %}
+        <li><a class="nav-link" {% if item.link == page.url %}aria-current="page"{% endif %} href="{{ item.link | relative_url }}">{{ item.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <a class="button button-small nav-cta" href="tel:{{ site.contact.phone_link }}">Let’s talk {% include icon.html name="phone" %}</a>
+    </div>
   </nav>
 </header>

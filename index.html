@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bookkeeping for Northern California Small Businesses
-description: Spend more time running your business. VANS Bookkeeping offers personalized bookkeeping, financial reporting, and QuickBooks Online support from Vacaville, California.
+description: Spend more time running your business. [company_name] offers personalized bookkeeping, financial reporting, and QuickBooks Online support from Vacaville, California.
 ---
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-copy">
@@ -9,7 +9,7 @@ description: Spend more time running your business. VANS Bookkeeping offers pers
     <h1 id="hero-title">Your business.<br>Your ambition.<br><span>Our bookkeeping.</span></h1>
     <p class="hero-description">You didn’t start a business to spend your evenings balancing the books. We bring clarity to your numbers, so you can get back to what you do best.</p>
     <div class="button-group">
-      <a href="{{ '/contact/' | relative_url }}" class="button">Let’s talk about your business {% include icon.html name="arrow" %}</a>
+      {% include talk-button.html classes="button" label="Let’s talk about your business" %}
       <a href="#services" class="text-link">Explore our services {% include icon.html name="arrow" %}</a>
     </div>
     <p class="hero-note">Personalized support for Northern California small businesses.</p>
@@ -51,7 +51,7 @@ description: Spend more time running your business. VANS Bookkeeping offers pers
     <p class="eyebrow">MORE THAN NUMBERS</p>
     <h2 id="approach-title">A bookkeeping partner.<br>A little breathing room.</h2>
     <p>Your business deserves attention, and so do you. We take the time to understand how you work and help bridge the gap between your day-to-day finances and your CPA.</p>
-    <a href="{{ '/about/' | relative_url }}" class="text-link">Get to know VANS Bookkeeping {% include icon.html name="arrow" %}</a>
+    <a href="{{ '/about/' | relative_url }}" class="text-link">Get to know {{ site.title | escape }} {% include icon.html name="arrow" %}</a>
   </div>
   <div class="benefit-stack">
     <div class="benefit"><span class="benefit-number">01</span><div><h3>Care in the details</h3><p>Thoughtfully organized records and reconciled accounts, so your numbers tell a clearer story.</p></div></div>
@@ -77,15 +77,6 @@ description: Spend more time running your business. VANS Bookkeeping offers pers
     <h3>Local understanding.<br>Flexible connections.</h3>
     <ul class="region-tags" role="list"><li>Vacaville</li><li>Fairfield</li><li>Solano County</li><li>Sacramento region</li><li>North Bay</li><li>Bay Area</li></ul>
     <p>Virtual services also available nationwide.</p>
-  </div>
-</section>
-
-<section class="section faq-section" aria-labelledby="faq-title">
-  <div><p class="eyebrow">A FEW THINGS YOU MAY BE WONDERING</p><h2 id="faq-title">Good questions.<br>Clear answers.</h2><p>Have something else in mind?</p><a href="{{ '/contact/' | relative_url }}" class="text-link">Just ask us {% include icon.html name="arrow" %}</a></div>
-  <div class="faq-list">
-    {% for faq in site.data.faq %}
-    <details class="faq-item"><summary>{{ faq.question }}<span class="faq-toggle" aria-hidden="true"></span></summary><p>{{ faq.answer }}</p></details>
-    {% endfor %}
   </div>
 </section>
 
