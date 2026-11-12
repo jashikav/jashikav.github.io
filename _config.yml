@@ -8,8 +8,13 @@ contact:
   phone: "(916) 429-5786"
   phone_link: "+19164295786"
   email: "jashika@vansbookkeeping.com"
-  booking_url: "https://calendly.com/vansbookkeeping/30min"
   location: "Vacaville, California"
+
+# EmailJS browser settings are public identifiers, not private credentials.
+emailjs:
+  service_id: "service_yz86oe4"
+  template_id: "template_ksu5ow9"
+  public_key: "VRgWiFmMn00ckKD0E"
 
 include:
   - _pages

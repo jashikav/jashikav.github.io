@@ -1,12 +1,102 @@
 ---
-title: Contact & Book an Appointment
-description: Talk with [company_name] about your small business. Book a 30-minute appointment, call us, or email us in Vacaville, California.
+title: Contact & Customer Inquiries
+description: Talk with [company_name] about your small business. Send an inquiry, call us, or email us in Vacaville, California.
 layout: default
 permalink: /contact/
+contact_form: true
 ---
-<section class="page-hero" aria-labelledby="contact-title"><p class="eyebrow">LET’S TAKE THE NEXT STEP</p><h1 id="contact-title">Your books don’t have to<br><span>be a solo project.</span></h1><p>Tell us about your business, ask a question, or choose a time to talk. We’ll help you explore the bookkeeping support that fits.</p></section>
+<section class="page-hero" aria-labelledby="contact-title"><p class="eyebrow">LET’S TAKE THE NEXT STEP</p><h1 id="contact-title">Your books don’t have to<br><span>be a solo project.</span></h1><p>Tell us about your business or ask a question. We’ll help you explore the bookkeeping support that fits.</p></section>
+<section class="section contact-inquiry" aria-labelledby="inquiry-title">
+  <div class="section-heading"><div><p class="eyebrow">TELL US ABOUT YOUR BUSINESS</p><h2 id="inquiry-title">How can we help with your books?</h2></div></div>
+  <p class="section-intro">Share a few details so we can understand the support you need. All fields are required unless marked optional.</p>
+  <form id="contact-form" class="card inquiry-form" aria-describedby="inquiry-availability" data-service-id="{{ site.emailjs.service_id | escape }}" data-template-id="{{ site.emailjs.template_id | escape }}" data-public-key="{{ site.emailjs.public_key | escape }}">
+    <fieldset>
+      <legend>Your contact details</legend>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="customer-name">Name</label>
+          <input id="customer-name" name="from_name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+        <div class="form-field">
+          <label for="customer-email">Email</label>
+          <input id="customer-email" name="reply_to" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Your business & bookkeeping</legend>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="business-type">Type of business</label>
+          <select id="business-type" name="business_type" required>
+            <option value="" selected disabled>Select your business type</option>
+            <option value="LLC">LLC</option>
+            <option value="Sole Prop">Sole Prop</option>
+            <option value="Corporation">Corporation</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="bookkeeping-service">Bookkeeping support needed</label>
+          <select id="bookkeeping-service" name="bookkeeping_service" required>
+            <option value="" selected disabled>Select the support you need</option>
+            <option value="Monthly bookkeeping">Monthly bookkeeping</option>
+            <option value="Cleanup">Cleanup</option>
+            <option value="Monthly bookkeeping and cleanup">Monthly bookkeeping and cleanup</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="monthly-transactions">Number of transactions per month</label>
+          <input id="monthly-transactions" name="monthly_transactions" type="number" min="0" step="1" inputmode="numeric" aria-describedby="transactions-hint" required>
+          <p id="transactions-hint" class="field-hint">An estimate across all accounts is fine.</p>
+        </div>
+        <div class="form-field">
+          <label for="financial-accounts">Number of financial accounts</label>
+          <input id="financial-accounts" name="financial_accounts" type="number" min="0" step="1" inputmode="numeric" aria-describedby="accounts-hint" required>
+          <p id="accounts-hint" class="field-hint">Include checking, savings, credit cards, loans, and any other business accounts.</p>
+        </div>
+        <div class="form-field">
+          <label for="payroll-required">Do you need payroll?</label>
+          <select id="payroll-required" name="payroll_required" aria-controls="employee-count-field" required>
+            <option value="" selected disabled>Select an option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div id="employee-count-field" class="form-field" hidden>
+          <label for="employee-count">Number of employees</label>
+          <input id="employee-count" name="employee_count" type="number" min="1" step="1" inputmode="numeric" disabled>
+        </div>
+        <div class="form-field">
+          <label for="years-in-business">Number of years in business</label>
+          <input id="years-in-business" name="years_in_business" type="number" min="0" step="1" inputmode="numeric" aria-describedby="years-hint" required>
+          <p id="years-hint" class="field-hint">Enter 0 for a startup or less than one year in business.</p>
+        </div>
+        <div class="form-field">
+          <label for="quickbooks-status">QuickBooks Online</label>
+          <select id="quickbooks-status" name="quickbooks_status" required>
+            <option value="" selected disabled>Select your current setup</option>
+            <option value="Already using QuickBooks Online">Already using QuickBooks Online</option>
+            <option value="Need QuickBooks Online setup">Need QuickBooks Online setup</option>
+            <option value="Not sure — would like guidance">Not sure — would like guidance</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-field">
+      <label for="additional-information">Additional information <span>(optional)</span></label>
+      <textarea id="additional-information" name="additional_information" rows="5" maxlength="5000" aria-describedby="additional-hint"></textarea>
+      <p id="additional-hint" class="field-hint">Tell us about your goals, questions, or anything else you’d like us to know.</p>
+    </div>
+    <p id="inquiry-status" class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+    <div class="form-actions">
+      <p id="inquiry-availability" class="form-availability">Send your inquiry, <a class="text-link" href="mailto:{{ site.contact.email }}">email us</a>, or <a class="text-link" href="tel:{{ site.contact.phone_link }}">give us a call</a>.</p>
+      <button class="button" type="submit" disabled aria-describedby="inquiry-availability"><span data-submit-label>Send inquiry</span> {% include icon.html name="arrow" %}</button>
+      <noscript><p>JavaScript is needed for this form. Please email us or give us a call to get in touch.</p></noscript>
+    </div>
+  </form>
+</section>
 <section class="contact-grid" aria-label="Ways to get in touch">
-  <article class="card booking-card"><div class="icon-tile">{% include icon.html name="clock" %}</div><p class="eyebrow">A CONVERSATION IS A GOOD START</p><h2>Let’s talk about your business.</h2><p>Book a 30-minute appointment to walk through your current books, your goals, and where you need a hand.</p><ul class="check-list"><li>{% include icon.html name="check" %}Tell us a little about your business</li><li>{% include icon.html name="check" %}Discuss your bookkeeping needs</li><li>{% include icon.html name="check" %}Explore services and next steps</li></ul><a class="button" href="{{ site.contact.booking_url }}" target="_blank" rel="noopener noreferrer">Choose a time on Calendly {% include icon.html name="arrow" %}<span class="sr-only"> (opens in a new tab)</span></a><p class="booking-note">Prefer a virtual meeting? Let us know when you book.</p></article>
+  <article class="card contact-intro-card"><div class="icon-tile">{% include icon.html name="mail" %}</div><p class="eyebrow">A CONVERSATION IS A GOOD START</p><h2>Let’s talk about your business.</h2><p>Share your current bookkeeping needs, your goals, and where you need a hand. We’ll get in touch to discuss how we can help.</p><ul class="check-list"><li>{% include icon.html name="check" %}Tell us a little about your business</li><li>{% include icon.html name="check" %}Discuss your bookkeeping needs</li><li>{% include icon.html name="check" %}Explore services and next steps</li></ul><a class="button" href="#contact-form">Send an inquiry {% include icon.html name="arrow" %}</a></article>
   <div class="contact-stack">
     <article class="card contact-card"><div class="icon-tile">{% include icon.html name="mail" %}</div><div><h2>Send an email</h2><p>A question or a little background is all it takes.</p><a class="text-link" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div></article>
     <article class="card contact-card"><div class="icon-tile">{% include icon.html name="phone" %}</div><div><h2>Give us a call</h2><p>Let’s find a convenient time to connect.</p><a class="button button-small" href="tel:{{ site.contact.phone_link }}">Call us {% include icon.html name="phone" %}</a></div></article>
@@ -15,5 +105,5 @@ permalink: /contact/
 </section>
 <section class="section contact-details" aria-labelledby="prepare-title">
   <div><p class="eyebrow">BEFORE WE TALK</p><h2 id="prepare-title">Come as you are.<br>We’ll start from there.</h2><p>You don’t need perfect books to have a useful conversation. Share the software you use, the tasks taking up your time, and what you’d like help with. We’ll talk through the rest together.</p><p>Please save financial documents for after our first conversation, when we can agree on how to share them.</p></div>
-  <aside class="card hours-card"><h3>Business hours</h3><p class="hours-note">All times Pacific.</p><dl><div><dt>Monday – Friday</dt><dd>12:00 PM – 9:00 PM</dd></div><div><dt>Saturday</dt><dd>8:00 AM – 6:00 PM</dd></div><div><dt>Sunday</dt><dd>8:00 AM – 6:00 PM</dd></div></dl><p>Use the booking calendar to see available appointment times.</p></aside>
+  <aside class="card hours-card"><h3>Business hours</h3><p class="hours-note">All times Pacific.</p><dl><div><dt>Monday – Friday</dt><dd>12:00 PM – 9:00 PM</dd></div><div><dt>Saturday</dt><dd>8:00 AM – 6:00 PM</dd></div><div><dt>Sunday</dt><dd>8:00 AM – 6:00 PM</dd></div></dl><p>Give us a call during business hours, or send an inquiry anytime.</p></aside>
 </section>
