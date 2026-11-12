@@ -17,4 +17,5 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/logo.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.data.version.version }}">
   <script src="{{ '/assets/js/navigation.js' | relative_url }}?v={{ site.data.version.version }}" defer></script>
+  {% if page.contact_form %}<script src="{{ '/assets/js/contact-form.js' | relative_url }}?v={{ site.data.version.version }}" defer></script>{% endif %}
 </head>

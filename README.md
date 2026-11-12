@@ -4,7 +4,7 @@ Jekyll builds the HTML; Tailwind CSS compiles a local stylesheet with a theme ba
 
 ## Company name
 
-Change `title` in `_config.yml` to update the company name throughout the website, including the header, footer, page copy, metadata, and SVG logo title. Metadata uses `[company_name]` as a placeholder, resolved by the head template. Restart Jekyll after editing the config. Contact addresses, booking URLs, and the domain are configured separately.
+Change `title` in `_config.yml` to update the company name throughout the website, including the header, footer, page copy, metadata, and SVG logo title. Metadata uses `[company_name]` as a placeholder, resolved by the head template. Restart Jekyll after editing the config. Contact addresses and the domain are configured separately.
 
 ## Local development
 
@@ -35,13 +35,23 @@ The site targets Northern California small businesses with a blue brand theme. A
 
 - Update services in `_data/services.yml`. The `home` flag selects the three homepage services; each `id` is also a linkable anchor on the services page.
 - Update the process and shared homepage/FAQ-page answers in `_data/process.yml` and `_data/faq.yml`.
-- Update phone, email, location, and the Calendly link once in `_config.yml` under `contact`.
+- Update phone, email, and location once in `_config.yml` under `contact`.
 - Edit theme tokens, shared components, and responsive layouts in `styles/app.css`; rebuild rather than editing generated CSS.
 - Each page provides its own search description. Shared metadata adds canonical and social sharing tags.
 
-The consultation photo has 640px and 1200px WebP versions with responsive image sizing. The logo in `assets/images/logo.svg` combines a white V with an open pale blue book on the brand-blue background; the navigation and favicon share this scalable asset. Original JPEGs remain in the repository but are excluded from the published build. Calendly opens through a direct booking link, so the contact page does not load a third-party scheduling script. FAQs use native HTML `details` elements and need no JavaScript.
+The consultation photo has 640px and 1200px WebP versions with responsive image sizing. The logo in `assets/images/logo.svg` combines a white V with an open pale blue book on the brand-blue background; the navigation and favicon share this scalable asset. Original JPEGs remain in the repository but are excluded from the published build. Visitors can reach the business through the contact form, email, or phone. FAQs use native HTML `details` elements and need no JavaScript.
 
 `npm run check` validates generated pages, local links (including service anchors and responsive image candidates), page headings, descriptions, theme output, and deployment metadata.
+
+## Contact inquiry form
+
+The contact page includes the customer inquiry form in `_pages/contact.html`, with responsive styles in `styles/app.css`. `assets/js/contact-form.js` shows and requires the employee count only when payroll is needed. Entering 0 years in business identifies a startup or a business less than one year old.
+
+EmailJS settings live under `emailjs` in `_config.yml`. These service/template IDs and the public key are intended for browser use; never add a private key. Restart Jekyll after changing the settings.
+
+The submit button enables once JavaScript loads and the settings are present. The form sends through the [EmailJS REST API](https://www.emailjs.com/docs/rest-api/send/), validates inputs, and disables controls during sending to prevent duplicate submissions. Success clears the form; failures preserve all entries for retry. Email and phone alternatives remain available. No inquiry is stored on this website.
+
+EmailJS template variables are `from_name`, `reply_to`, `business_type`, `bookkeeping_service`, `monthly_transactions`, `financial_accounts`, `payroll_required`, `employee_count`, `years_in_business`, `quickbooks_status`, and `additional_information`. The employee count is sent as `Not applicable` when payroll is not needed. `name`, `email`, `title`, and `message` are also provided for common contact templates; `message` contains a labeled summary of every field. Configure the EmailJS template to send to the business inbox, set Reply-To to `{{reply_to}}`, and include `{{message}}` in the body (or the individual variables). The connected template's contents and recipient are managed in EmailJS.
 
 ## GitHub Pages setup and deployment
 

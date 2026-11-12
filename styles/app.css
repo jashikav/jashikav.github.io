@@ -174,13 +174,35 @@
   .about-story > img { width: 100%; height: 450px; object-fit: cover; border-radius: 16px 90px 16px 16px; }
   .about-story p:not(.eyebrow) { margin-top: 20px; font-size: .94rem; }
   .value-card p { margin-top: 12px; }
+  .contact-inquiry { margin-top: 48px; }
+  .inquiry-form { display: grid; gap: 32px; padding: 38px; }
+  .inquiry-form fieldset { min-width: 0; }
+  .inquiry-form legend { margin-bottom: 20px; font-size: 1.15rem; font-weight: 650; letter-spacing: -.025em; }
+  .inquiry-form fieldset + fieldset { padding-top: 28px; border-top: 1px solid var(--border); }
+  .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .form-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .form-field label { font-size: .875rem; font-weight: 600; }
+  .form-field label span { color: var(--text-muted); font-weight: 400; }
+  .form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 48px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; background: white; color: var(--color-brand-950); font-size: 1rem; }
+  .form-field select { padding-right: 28px; }
+  .form-field textarea { min-height: 144px; resize: vertical; }
+  .form-field input:hover, .form-field select:hover, .form-field textarea:hover { border-color: var(--color-brand-300); }
+  .form-field :is(input, select, textarea):focus-visible { border-color: var(--color-brand-600); outline-offset: 2px; }
+  .inquiry-form .field-hint { font-size: .78rem; line-height: 1.6; }
+  .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .inquiry-form .form-availability { flex: 1 1 380px; font-size: .85rem; }
+  .form-availability .text-link { display: inline; font-size: inherit; text-decoration: underline; }
+  .form-actions .button:disabled { background: #53677f; cursor: not-allowed; box-shadow: none; }
+  .inquiry-form .form-status:empty { margin-block: -16px; }
+  .inquiry-form .form-status:not(:empty) { padding: 16px 20px; border: 1px solid var(--border); border-radius: 8px; background: var(--color-brand-50); font-size: .9rem; }
+  .inquiry-form .form-status[data-state="success"] { border-color: #9ac9ae; background: #f0faf4; color: #205c39; }
+  .inquiry-form .form-status[data-state="error"] { border-color: #e4b1b1; background: #fff5f5; color: #8a2929; }
   .contact-grid { display: grid; grid-template-columns: 1.12fr 1fr; gap: 24px; margin-top: 48px; }
-  .booking-card { padding: 38px; background: var(--color-brand-50); border-color: var(--color-brand-100); }
-  .booking-card .icon-tile { background: white; }
-  .booking-card h2 { font-size: 1.9rem; }
-  .booking-card > p:not(.eyebrow) { margin-top: 18px; }
-  .booking-card .check-list { margin-top: 28px; }
-  .booking-card .booking-note { font-size: .75rem; }
+  .contact-intro-card { padding: 38px; background: var(--color-brand-50); border-color: var(--color-brand-100); }
+  .contact-intro-card .icon-tile { background: white; }
+  .contact-intro-card h2 { font-size: 1.9rem; }
+  .contact-intro-card > p:not(.eyebrow) { margin-top: 18px; }
+  .contact-intro-card .check-list { margin-top: 28px; }
   .contact-stack { display: flex; flex-direction: column; gap: 16px; }
   .contact-card { display: flex; gap: 20px; align-items: flex-start; flex: 1; padding: 26px; }
   .contact-card .icon-tile { margin-bottom: 0; }
@@ -220,7 +242,7 @@
   html { scroll-padding-top: 100px; }
   .navigation { flex-wrap: wrap; min-height: 80px; padding-block: 16px; }
   .nav-toggle { margin-left: auto; }
-  .nav-links { flex-direction: column; align-items: stretch; width: 100%; gap: 16px; padding: 12px 4px 4px; border-top: 1px solid var(--border); max-height: calc(100dvh - 100px); overflow-y: auto; }
+  .nav-links { position: absolute; top: 100%; left: 0; flex-direction: column; align-items: stretch; width: 100%; gap: 16px; padding: 12px 32px 20px; border-top: 1px solid var(--border); background: white; box-shadow: 0 10px 18px #102b4e10; max-height: calc(100dvh - 100px); overflow-y: auto; }
   .nav-menu { flex-direction: column; align-items: stretch; gap: 4px; }
   .nav-submenu { position: static; min-width: 0; margin: 4px 0 8px 16px; box-shadow: none; }
   .nav-dropdown > summary { justify-content: space-between; }
@@ -246,6 +268,7 @@
 }
 @media (max-width: 599px) {
   .container { width: calc(100% - 40px); }
+  .nav-links { padding-inline: 20px; }
   .brand { gap: 9px; }
   .brand img { width: 40px; height: 40px; }
   .brand span { font-size: 1rem; }
@@ -286,10 +309,14 @@
   .page-hero > p:not(.eyebrow) { font-size: .98rem; }
   .scope-note { flex-direction: column; gap: 18px; padding: 26px; }
   .about-story > img { height: 280px; }
+  .contact-inquiry { margin-top: 32px; }
+  .inquiry-form { gap: 28px; padding: 24px; }
+  .form-grid { grid-template-columns: 1fr; gap: 20px; }
+  .form-actions .button { width: 100%; }
   .contact-grid { margin-top: 32px; }
-  .booking-card { padding: 26px; }
-  .booking-card h2 { font-size: 1.6rem; }
-  .booking-card .button { width: 100%; }
+  .contact-intro-card { padding: 26px; }
+  .contact-intro-card h2 { font-size: 1.6rem; }
+  .contact-intro-card .button { width: 100%; }
   .contact-card { padding: 22px; gap: 14px; }
   .contact-card .icon-tile { width: 38px; height: 38px; }
   .contact-card .text-link { font-size: .79rem; }
